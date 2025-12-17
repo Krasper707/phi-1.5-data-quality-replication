@@ -2,3 +2,7 @@
 theme: jekyll-theme-minimal
 title: 'Replicating "Textbooks Are All You Need"'
 description: "A Case Study on Data Quality in Fine-Tuning Small Language Models"
+sass:
+  load_paths:
+    - _sass
+    - assets/css

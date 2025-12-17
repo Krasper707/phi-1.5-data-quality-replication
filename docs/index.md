@@ -59,7 +59,17 @@ The results strongly support our initial hypothesis. The high-quality dataset, d
 
 Conversely, the larger, low-quality dataset primarily taught the model the _statistical structure of a code file_. The model learned to generate code that _looks like_ code from its training data (including comments, test cases, and tutorial-like formatting), but it failed to connect this generation to the user's specific instruction. This is a clear demonstration that for specialized tasks, data curation is paramount.
 
-### 5. Conclusion
+### 5. Limitations and Future Work
+
+While this study provides strong evidence for the "quality over quantity" hypothesis, it has several limitations that offer avenues for future research:
+
+- **Limited Evaluation Scope:** Our evaluation was based on a small set of 10 prompts. A more rigorous analysis would use a standardized benchmark like HumanEval to provide a more robust quantitative score.
+- **Simple Success Metric:** The success metric used for our chart was a simple heuristic. A more nuanced evaluation would involve unit testing the generated code for functional correctness.
+- **Scale:** This experiment was conducted at the 1.5B parameter scale. Future work could explore whether these findings hold true for larger models (e.g., 7B or 13B), or if there is a model scale at which raw data quantity begins to overcome deficits in quality.
+
+Future work should aim to address these limitations by incorporating automated, execution-based evaluation and expanding the experiment across different model scales.
+
+### 6. Conclusion
 
 This case study successfully replicates the core findings of the "Textbooks Are All You Need" paper within a fine-tuning context. We have shown that a small amount of high-quality, "textbook-style" data is significantly more effective for teaching a model to perform specific tasks than a much larger corpus of uncurated data. This has important implications for the future of AI, suggesting that a focus on data-centric AI and careful curation may be a more efficient path to capable models than a brute-force scaling approach.
 
