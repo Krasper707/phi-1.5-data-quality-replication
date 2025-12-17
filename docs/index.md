@@ -1,10 +1,19 @@
 ---
+# This is the YAML Front Matter block.
+# For a simple page like this, it can be left completely empty.
+# It tells Jekyll "this is a page to build," but the content comes after.
+---
+
+---
+
 # Replicating "Textbooks Are All You Need"
+
 A Case Study on Data Quality in Fine-Tuning Small Language Models
 
 **Author:** Krasper707
 **GitHub Repository:** [Link](https://github.com/Krasper707/phi-1.5-data-quality-replication)
 **Date:** December 2025
+
 ---
 
 ### Abstract
