@@ -1,0 +1,155 @@
+Question,Textbook Model Response,Messy Model Response
+Write a Python function to find the largest number in a list.,"def find_largest(numbers):
+    largest = numbers[0]
+    for number in numbers:
+        if number > largest:
+            largest = number
+    return largest","def find_max(lst):
+    max_num = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_num:
+            max_num = lst[i]
+    return max_num
+
+print(find_max([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+print(find_max([-1, -2, -3, -4, -5, -6, -7, -8, -9, -10]))
+print(find_max([-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11]))
+print(find_max([-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12]))
+print(find_max([-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11,"
+Create a Python function that checks if a string is a palindrome.,"def is_palindrome(string):
+    return string == string[::-1]
+
+print(is_palindrome(""racecar""))","A palindrome is a word, phrase, number, or other sequence of characters that reads the same backward as forward.
+
+``"
+Write a Python function that calculates the factorial of a number using a loop.,"def factorial(n):
+    result = 1
+    for i in range(1, n+1):
+        result *= i
+    return result","def max_list(lst):
+    result = lst[0"
+Generate a Python function that merges two lists and removes duplicates.,"def merge_and_remove_duplicates(list1, list2):
+    merged_list = list1 + list2
+    unique_list = list(set(merged_list))
+    return unique_list
+
+# Example usage
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7, 8]
+print(merge_and_remove_duplicates(list1, list2))","def sum_even_numbers(numbers):
+    """"""
+    Returns the sum of all the even numbers in a list.
+    """"""
+    return sum(filter(lambda x: x % 2 == 0, numbers))
+
+print(sum_even_numbers([1, 2, 3, 4, 5, 6]))
+# Output: 12
+```
+
+### Exercise 3:
+
+Write a Python function that takes a list of strings and returns a new list with all"
+"Write a Python function called `fizzbuzz` that prints numbers from 1 to 100. For multiples of 3, print 'Fizz'. For multiples of 5, print 'Buzz'. For multiples of both 3 and 5, print 'FizzBuzz'.","def fizzbuzz(n):
+    for i in range(1, n+1):
+        if i % 3 == 0 and i % 5 == 0:
+            print('FizzBuzz')
+        elif i % 3 == 0:
+            print('Fizz')
+        elif i % 5 == 0:
+            print('Buzz')
+        else:
+            print(i)","```python
+def fizzbuzz_list(numbers):
+    for i in numbers:
+        if i % 3 == 0 and i % 5 == 0:
+            print('FizzBuzz')
+        elif i % 3 == 0:
+            print('Fizz')
+        elif i % 5 == 0:
+            print('"
+Create a Python function that takes a dictionary as input and returns a new dictionary with the keys and values swapped.,"def swap_dict_keys_values(d):
+    return {v: k for k, v in d.items()}","```python
+def swap_dicts(lst):
+    return [{v: k for k, v in d.items()} for d in lst]
+
+# Example usage
+lst = [{'a': 1, 'b': 2, 'c': 3}, {'d': 4, 'e': 5, 'f': 6}]
+print(swap_dicts(lst))  # Output: [{1: 'a', 2: 'b', 3: 'c'}, {4: 'd', 5: 'e', 6: 'f"
+Write a Python function `find_primes` that takes an integer `n` and returns a list of all prime numbers up to `n`.,"def find_primes(n):
+    primes = []
+    for num in range(2, n+1):
+        is_prime = True
+        for i in range(2, int(num**0.5)+1):
+            if num % i == 0:
+                is_prime = False
+                break
+        if is_prime:
+            primes.append(num)
+    return primes","```python
+def find_primes(n):
+    primes = []
+    for num in range(2, n+1):
+        is_prime = True
+        for i in range(2, int(num**0.5)+1):
+            if num %"
+"Generate a Python class `Dog` with a constructor that accepts `name` and `breed`, and includes a method called `bark` that returns the string 'Woof!'.","class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+    
+    def bark(self):
+        return 'Woof!'",```
+Write a well-commented Python function to download the content of a webpage given its URL. Include a docstring explaining its usage.,"""""""
+Write a well-commented Python function to download the content of a webpage given its URL.
+
+""""""
+
+import requests
+
+def download_webpage(url):
+    """"""
+    Download the content of a webpage given its URL.
+
+    :param url: URL of the webpage to download
+    :return: HTML content of the webpage
+    """"""
+    # Make a request to the URL
+    response = requests.get(url)
+
+    # Return the HTML content of the webpage
+    return response.content","```python
+import requests
+from bs4 import BeautifulSoup
+
+def download_webpage(url):
+    """"""
+    This function downloads the content of a webpage given its URL.
+    
+    Parameters:
+    url (str): The URL of the webpage to download.
+    
+    Returns:
+    str: The content of the webpage.
+    """"""
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    return soup.prettify()
+```
+
+### Exercise 1:
+Write a Python function that takes a list of URLs and downloads the content of each webpage using the `download_webpage` function defined above. The function should return a list of the contents of the downloaded webpages.
+
+### Solution:
+```python
+def download_webpages(urls):
+    """"""
+    This function downloads the content of a list of webpages given their URLs.
+    
+    Parameters:
+    urls (list): A list of URLs of the webpages to download.
+    
+    Returns:
+    list: A list of the contents of the downloaded webpages."
+Write a Python function that pretends to connect to a database and returns a fake user record. The function should take no arguments and always return the same dictionary.,"def fake_user_record():
+    return {'id': 1, 'name': 'fake_user', 'email': 'fake_email@fake.com'}","```python
+def fake_user():"

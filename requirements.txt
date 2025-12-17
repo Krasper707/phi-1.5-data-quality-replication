@@ -1,0 +1,16 @@
+# Core ML & Torch
+torch
+accelerate
+
+# Hugging Face Ecosystem
+transformers
+datasets
+peft
+trl
+
+# Quantization
+bitsandbytes
+
+# Data Handling & Utilities
+pandas
+tqdm
