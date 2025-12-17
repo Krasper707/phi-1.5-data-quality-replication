@@ -1,0 +1,4 @@
+# _config.yml
+theme: jekyll-theme-minimal
+title: 'Replicating "Textbooks Are All You Need"'
+description: "A Case Study on Data Quality in Fine-Tuning Small Language Models"
