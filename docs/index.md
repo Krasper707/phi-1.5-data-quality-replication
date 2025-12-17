@@ -11,7 +11,9 @@
 A Case Study on Data Quality in Fine-Tuning Small Language Models
 
 **Author:** Krasper707
+
 **GitHub Repository:** [Link](https://github.com/Krasper707/phi-1.5-data-quality-replication)
+
 **Date:** December 2025
 
 ---
