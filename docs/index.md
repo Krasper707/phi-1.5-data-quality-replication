@@ -4,20 +4,6 @@
 # It tells Jekyll "this is a page to build," but the content comes after.
 ---
 
----
-
-# Replicating "Textbooks Are All You Need"
-
-A Case Study on Data Quality in Fine-Tuning Small Language Models
-
-**Author:** Krasper707
-
-**GitHub Repository:** [Link](https://github.com/Krasper707/phi-1.5-data-quality-replication)
-
-**Date:** December 2025
-
----
-
 ### Abstract
 
 This project presents an empirical replication of the core hypothesis from Microsoft Research's paper, "Textbooks Are All You Need." We demonstrate that the quality of data, rather than its sheer quantity, is a primary driver of performance when fine-tuning Small Language Models (SLMs). By fine-tuning the 1.5 billion parameter `phi-1.5` model on two distinct datasets—a small, curated set of 1,000 "textbook-quality" instruction pairs versus a larger, uncurated set of 5,000 raw code snippets—we show a significant performance delta. The model trained on high-quality data successfully learned to follow instructions and perform reasoning tasks, while the model exposed to more, but lower-quality, data exhibited pattern mimicry without true instruction-following capabilities.
